@@ -1,23 +1,22 @@
 """
 URL configuration for api_todo project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import include, path
+This file defines the URL routes for the entire project.
 
+Django processes URLs in the order they appear here, 
+routing requests to the appropriate view or included URL config.
+"""
+
+from django.contrib import admin      # Importa o painel administrativo do Django
+from django.urls import include, path # Importa as funções 'include' e 'path' para definir rotas e incluir outras URLs
+
+
+# Lista principal de URLs do projeto
 urlpatterns = [
+    # Rota para acessar a interface administrativa padrão do Django
     path('admin/', admin.site.urls),
-    path('todo/', include('app.urls')),  # Inclui as rotas do app
+    
+    # Inclui as URLs definidas no arquivo 'app.urls' dentro do caminho '/todo/'
+    # Ou seja, todas as rotas definidas no app estarão disponíveis a partir de /todo/
+    path('todo/', include('app.urls')),  
 ]
