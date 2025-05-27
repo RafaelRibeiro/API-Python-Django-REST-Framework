@@ -14,4 +14,12 @@ venv/
 __pycache__/
 
 # 🛠️ VSCode
-# Ignora configurações pessoais do edito
+# Ignora configurações pessoais do editor Visual Studio Code.
+.vscode/
+
+# 💻 Sistema operacional
+# Arquivo oculto criado pelo macOS para armazenar configurações de visualização de pastas.
+.DS_Store
+
+# Arquivo criado pelo Windows para cache de miniaturas de imagens nas pastas.
+Thumbs.db
