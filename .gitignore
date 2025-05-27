@@ -1,0 +1,17 @@
+# 🐍 Virtual environment
+# Ignora pastas de ambientes virtuais Python, usadas para isolar dependências do projeto.
+env/
+venv/
+
+# 🚀 Django
+# Ignora arquivos de banco SQLite usados apenas no desenvolvimento local.
+*.sqlite3
+
+# Ignora arquivos Python compilados que são gerados automaticamente.
+*.pyc
+
+# Ignora a pasta onde o Python armazena caches de compilação.
+__pycache__/
+
+# 🛠️ VSCode
+# Ignora configurações pessoais do edito
